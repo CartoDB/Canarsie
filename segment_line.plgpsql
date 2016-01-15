@@ -1,0 +1,23 @@
+CREATE OR REPLACE FUNCTION stuartlynn.segment_line(geom geometry)
+ RETURNS SETOF geometry
+ LANGUAGE plpgsql
+AS $function$
+DECLARE
+	points integer;
+	oldPoint geometry;
+	newPoint geometry;
+	mergedGeom geometry;
+BEGIN
+	mergedGeom = ST_LINEMERGE(geom);
+
+	points = ST_NPOINTS(mergedGeom);
+	for i in 1..points LOOP
+		if i > 1 THEN
+			newPoint = ST_POINTN(mergedGeom,i);
+			RETURN NEXT ST_MAKELINE(oldPoint,newpoint)	;
+		END IF;
+		oldPoint = ST_POINTN(mergedGeom,i);
+	END LOOP;
+END;
+$function$
+
