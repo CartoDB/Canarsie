@@ -1,4 +1,4 @@
-# The Subway Series Part 1: A disruption of epic proportions
+# The Subway Series: A disruption of epic proportions
 
 banner
 
