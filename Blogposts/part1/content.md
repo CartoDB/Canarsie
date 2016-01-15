@@ -1,4 +1,8 @@
-Understanding the impact of closing a subway line
+# Understanding the impact of closing a subway line
+
+banner https://team.cartodb.com/u/mamataakella/viz/c4606d0e-bba3-11e5-9e12-0e3a376473ab/embed_map
+
+![img](http://i.imgur.com/jQboAqE.png)
 
 Earlier last week, news came out that the MTA was considering how to repair damages to the tunnel used by the L train to connect Manhattan and Brooklyn. The damages were caused by flooding during Hurricane Sandy and their repair may have big consequences to L train riders in the near future. As the MTA weighs the options, which include a full closing of the L train during repairs, or a longer period with weekend only closures, CartoDB wanted to dig in and look at what L train disruption looked like to the population of Brooklyn. How many, what backgrounds, and what alternatives are out there for what may come to the L.
 
