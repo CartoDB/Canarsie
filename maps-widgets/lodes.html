@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>L</title>
+  <meta name=viewport content="width=device-width initial-scale=1">
+  <link href="http://cartodb.com/favicon.ico" rel="shortcut icon" />
+  <link href="./dist/themes/css/deep-insights.css" rel="stylesheet" />
+  <script src="./dist/deep-insights.js"></script>
+  <style type="text/css">
+    html,
+    body {
+      position: relative;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="Dashboard-canvas" id="dashboard"></div>
+
+  <script>
+    window.onload = function() {
+      var diJSON = {
+        "title": "L",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate consequat vehicula. Sed eget leo a ex tempus cursus. Etiam consectetur cursus tortor, id dapibus elit condimentum id. Nulla sed gravida lorem, at ornare lectus. Aliquam quis erat porttitor, varius lectus eget, rhoncus mi...",
+        "user": {
+          "fullname": "research and data",
+          "avatar_url": "https://s3.amazonaws.com/com.cartodb.users-assets.production/production/piensaenpixel/assets/20150507074635Captura%20de%20pantalla%202015-05-07%20a%20la%28s%29%2009.46.28.png"
+        },
+        "updated_at": "2015-10-26T11:50:30+00:00",
+
+        "datasource": {
+          "type": "public_map",
+          "user_name": "solutions-ded02",
+          "maps_api_template": "https://{user}.cartodb-staging.com:443",
+          "stat_tag": "22723b5c-bd52-11e5-8a21-4a79aa3c4441",
+          "force_cors": true // This is sometimes set in the editor
+        },
+
+        "widgets": {
+          "histogram_widget_households_in_poverty": {
+            "layerId": "2aa54517-dc86-485c-b556-0f363c321573",
+            "type": "histogram",
+            "title": "Percentage of Households in Poverty",
+            "column": "ratio_poverty",
+            "bins": 10
+          },
+          "histogram_widget_subway_poverty_metric": {
+            "layerId": "2aa54517-dc86-485c-b556-0f363c321573",
+            "type": "histogram",
+            "title": "Ratio of Subway Commuters (to population)",
+            "column": "ratio_subway_elevated_public_transit_commuters_16_and_over",
+            "bins": 10
+          }
+        },
+        "vizJSON": {"id":"6fa3f336-bd55-11e5-8c60-04013fc66a01","version":"0.1.0","title":"lodes_od_acs_bk 1","likes":0,"description":null,"scrollwheel":false,"legends":true,"url":null,"map_provider":"leaflet","bounds":[[40.58736384168138,-74.0420150756836],[40.72514478577349,-73.61286163330078]],"center":"[40.65628988195705, -73.82743835449217]","zoom":12,"updated_at":"2016-01-17T20:41:21+00:00","layers":[{"options":{"visible":true,"type":"Tiled","name":"Dark matter (labels below)","className":"httpscartodbbasemapssglobalsslfastlynetdark_allzxypng","base_type":"default","urlTemplate":"https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png","minZoom":"0","maxZoom":"18","attribution":"&copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors &copy; <a href=\"http://cartodb.com/attributions\">CartoDB</a>","subdomains":"abcd","style":null,"read_only":true,"category":"CartoDB","order":0,"id":"3acb4776-da2d-44bd-a5c6-3b32825f6cf1"},"infowindow":null,"tooltip":null,"id":"3acb4776-da2d-44bd-a5c6-3b32825f6cf1","order":0,"type":"tiled"},{"type":"layergroup","options":{"user_name":"solutions-ded02","maps_api_template":"https://{user}.cartodb-staging.com:443","sql_api_template":"https://{user}.cartodb-staging.com:443","tiler_protocol":"http","tiler_domain":"cartodb-staging.com","tiler_port":"80","sql_api_protocol":"http","sql_api_domain":"cartodb-staging.com","sql_api_endpoint":"/api/v2/sql","sql_api_port":80,"filter":"mapnik","layer_definition":{"stat_tag":"6fa3f336-bd55-11e5-8c60-04013fc66a01","version":"1.0.1","layers":[{"id":"2aa54517-dc86-485c-b556-0f363c321573","type":"CartoDB","infowindow":{"fields":[],"template_name":"table/views/infowindow_light","template":"<div class=\"cartodb-popup v2\">\n  <a href=\"#close\" class=\"cartodb-popup-close-button close\">x</a>\n  <div class=\"cartodb-popup-content-wrapper\">\n    <div class=\"cartodb-popup-content\">\n      {{#content.fields}}\n        {{#title}}<h4>{{title}}</h4>{{/title}}\n        {{#value}}\n          <p {{#type}}class=\"{{ type }}\"{{/type}}>{{{ value }}}</p>\n        {{/value}}\n        {{^value}}\n          <p class=\"empty\">null</p>\n        {{/value}}\n      {{/content.fields}}\n    </div>\n  </div>\n  <div class=\"cartodb-popup-tip-container\"></div>\n</div>\n","alternative_names":{},"width":226,"maxHeight":180},"tooltip":{"fields":[],"template_name":"tooltip_light","template":"<div class=\"cartodb-tooltip-content-wrapper\">\n  <div class=\"cartodb-tooltip-content\">\n  {{#fields}}\n    {{#title}}\n    <h4>{{title}}</h4>\n    {{/title}}\n    <p>{{{ value }}}</p>\n  {{/fields}}\n  </div>\n</div>","alternative_names":{},"maxHeight":180},"legend":{"type":"choropleth","show_title":false,"title":"","template":"","visible":true,"items":[{"name":"Left label","visible":true,"value":"48.00","type":"text"},{"name":"Right label","visible":true,"value":"701.00","type":"text"},{"name":"Color","visible":true,"value":"#F2D2D3","type":"color"},{"name":"Color","visible":true,"value":"#EBB7B9","type":"color"},{"name":"Color","visible":true,"value":"#E39D9F","type":"color"},{"name":"Color","visible":true,"value":"#DB8286","type":"color"},{"name":"Color","visible":true,"value":"#D4686C","type":"color"},{"name":"Color","visible":true,"value":"#CC4E52","type":"color"},{"name":"Color","visible":true,"value":"#C1373C","type":"color"}]},"order":1,"visible":true,"options":{"sql":"select * from lodes_od_acs_bk","layer_name":"lodes_od_acs_bk","cartocss":"/** choropleth visualization */\n\n#lodes_od_acs_bk{\n  polygon-fill: #F2D2D3;\n  polygon-opacity: 0.8;\n  line-color: #FFF;\n  line-width: 0;\n  line-opacity: 1;\n}\n#lodes_od_acs_bk [ households_in_poverty <= 701] {\n   polygon-fill: #C1373C;\n}\n#lodes_od_acs_bk [ households_in_poverty <= 323] {\n   polygon-fill: #CC4E52;\n}\n#lodes_od_acs_bk [ households_in_poverty <= 243] {\n   polygon-fill: #D4686C;\n}\n#lodes_od_acs_bk [ households_in_poverty <= 190] {\n   polygon-fill: #DB8286;\n}\n#lodes_od_acs_bk [ households_in_poverty <= 143] {\n   polygon-fill: #E39D9F;\n}\n#lodes_od_acs_bk [ households_in_poverty <= 95] {\n   polygon-fill: #EBB7B9;\n}\n#lodes_od_acs_bk [ households_in_poverty <= 48] {\n   polygon-fill: #F2D2D3;\n}","cartocss_version":"2.1.1","interactivity":"cartodb_id","table_name":"\"\"."}},{"id":"7840999e-b3c6-43f3-8dc8-2354e2ad8571","type":"CartoDB","infowindow":{"fields":[],"template_name":"table/views/infowindow_light","template":"<div class=\"cartodb-popup v2\">\n  <a href=\"#close\" class=\"cartodb-popup-close-button close\">x</a>\n  <div class=\"cartodb-popup-content-wrapper\">\n    <div class=\"cartodb-popup-content\">\n      {{#content.fields}}\n        {{#title}}<h4>{{title}}</h4>{{/title}}\n        {{#value}}\n          <p {{#type}}class=\"{{ type }}\"{{/type}}>{{{ value }}}</p>\n        {{/value}}\n        {{^value}}\n          <p class=\"empty\">null</p>\n        {{/value}}\n      {{/content.fields}}\n    </div>\n  </div>\n  <div class=\"cartodb-popup-tip-container\"></div>\n</div>\n","alternative_names":{},"width":226,"maxHeight":180},"tooltip":{"fields":[],"template_name":"tooltip_light","template":"<div class=\"cartodb-tooltip-content-wrapper\">\n  <div class=\"cartodb-tooltip-content\">\n  {{#fields}}\n    {{#title}}\n    <h4>{{title}}</h4>\n    {{/title}}\n    <p>{{{ value }}}</p>\n  {{/fields}}\n  </div>\n</div>","alternative_names":{},"maxHeight":180},"legend":{"type":"category","show_title":false,"title":"","template":"","visible":true,"items":[{"name":"G","visible":true,"value":"#00ffff"},{"name":"J","visible":true,"value":"#ff00ff"},{"name":"L","visible":true,"value":"#ffff00"}]},"order":2,"visible":true,"options":{"sql":"SELECT * FROM nyc_subway_lines","layer_name":"nyc_subway_lines","cartocss":"/** category visualization */\n\n#nyc_subway_lines {\n   line-width: 1.5;\n   line-opacity: 0.7;\n   line-color: blue;\n}\n#nyc_subway_lines[rt_symbol=\"L\"] {\n   line-color: #ffff00;\n}","cartocss_version":"2.1.1","interactivity":"cartodb_id","table_name":"\"\"."}},{"id":"fed7cea3-9ee5-49b7-b185-c725b005c449","type":"CartoDB","infowindow":{"fields":[],"template_name":"table/views/infowindow_light","template":"<div class=\"cartodb-popup v2\">\n  <a href=\"#close\" class=\"cartodb-popup-close-button close\">x</a>\n  <div class=\"cartodb-popup-content-wrapper\">\n    <div class=\"cartodb-popup-content\">\n      {{#content.fields}}\n        {{#title}}<h4>{{title}}</h4>{{/title}}\n        {{#value}}\n          <p {{#type}}class=\"{{ type }}\"{{/type}}>{{{ value }}}</p>\n        {{/value}}\n        {{^value}}\n          <p class=\"empty\">null</p>\n        {{/value}}\n      {{/content.fields}}\n    </div>\n  </div>\n  <div class=\"cartodb-popup-tip-container\"></div>\n</div>\n","alternative_names":{},"width":226,"maxHeight":180},"tooltip":{"fields":[],"template_name":"tooltip_light","template":"<div class=\"cartodb-tooltip-content-wrapper\">\n  <div class=\"cartodb-tooltip-content\">\n  {{#fields}}\n    {{#title}}\n    <h4>{{title}}</h4>\n    {{/title}}\n    <p>{{{ value }}}</p>\n  {{/fields}}\n  </div>\n</div>","alternative_names":{},"maxHeight":180},"legend":{"type":"none","show_title":false,"title":"","template":"","visible":true},"order":3,"visible":true,"options":{"sql":"select * from table_29","layer_name":"table_29","cartocss":"/** simple visualization */\n\n#null{\n  line-color: #FF6600;\n  line-width: 2;\n  line-opacity: 0.7;\n}","cartocss_version":"2.1.1","interactivity":"cartodb_id","table_name":"\"\"."}}]},"attribution":""}}],"overlays":[{"type":"share","order":2,"options":{"display":true,"x":20,"y":20},"template":""},{"type":"search","order":3,"options":{"display":true,"x":60,"y":20},"template":""},{"type":"zoom","order":6,"options":{"display":true,"x":20,"y":20},"template":"<a href=\"#zoom_in\" class=\"zoom_in\">+</a> <a href=\"#zoom_out\" class=\"zoom_out\">-</a>"},{"type":"loader","order":8,"options":{"display":true,"x":20,"y":150},"template":"<div class=\"loader\" original-title=\"\"></div>"},{"type":"logo","order":9,"options":{"display":true,"x":10,"y":40},"template":""}],"prev":null,"next":null,"transition_options":{"time":0}}
+      };
+
+      cartodb.deepInsights.createDashboard('#dashboard', diJSON, {
+        no_cdn: false
+      });
+    }
+  </script>
+</body>
+
+</html>
