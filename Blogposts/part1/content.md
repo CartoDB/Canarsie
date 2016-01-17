@@ -1,6 +1,6 @@
 # The Subway Series: A disruption of epic proportions
 
-![img](imgs/brooklyn-network.png) (image is of old version)
+[![img](imgs/brooklyn-network.png)](https://team.cartodb.com/u/mamataakella/viz/fdbcdcba-bd4f-11e5-b5f0-0e674067d321/embed_map)
 
 Earlier last week, news came out that the MTA was considering how to repair damages to the tunnel used by the L train to connect Manhattan and Brooklyn. The damages were caused by flooding during Hurricane Sandy and their repair may have big consequences to L train riders in the near future. As the MTA weighs the options, which include a full closing of the L train during repairs, or a longer period with weekend only closures, CartoDB wanted to dig in and look at what L train disruption looked like to the population of Brooklyn. How many, what backgrounds, and what alternatives are out there for what may come to the L.
 
