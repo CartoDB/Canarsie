@@ -54,6 +54,19 @@ _about the headline of epic proportions in news. how epic would it be?_
 
 ##
 
+How to calculate new ride times based on optimization,
+
+```
+update total_time_to_manhattan_2 set az_route_time = CASE WHEN az_route = 'A' THEN az_time_to_a + az_a_cost ELSE
+CASE WHEN az_route = 'M' THEN az_time_to_m + az_m_cost ELSE
+az_time_to_s + az_s_cost END
+END;
+
+update total_time_to_manhattan_2 set az_route_total_time = az_route_time + (walking_time / 60)
+
+```
+
+
 How to create new estimate of best commute option with bus vs backtrack to M or A
 
 ```
