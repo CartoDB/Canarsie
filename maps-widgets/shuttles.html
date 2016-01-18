@@ -43,7 +43,15 @@
         },
 
         "widgets": {
-          'category_widget_routes': {
+          "formula_widget_avg": {
+            "layerId": "230c4ce6-dee6-40f9-a79b-eeae1a3844d3",
+            "type": "formula",
+            "title": "Shuttle need for load",
+            "column": "round(CASE WHEN az_route = 'S' THEN floor(lodes_jobs_bk_mh/65.0) ELSE 0 END)",
+            "operation": "sum",
+            "sync": true
+          }
+          , 'category_widget_routes': {
             "layerId": "230c4ce6-dee6-40f9-a79b-eeae1a3844d3",
             "type": "aggregation",
             "title": "New route to Manhattan",
@@ -53,30 +61,52 @@
             "sync": true
           }
           , "histogram_widget_ride_time_new": {
+            "layerId": "230c4ce6-dee6-40f9-a79b-eeae1a3844d3",
             "type": "histogram",
             "title": "Estimated new subway duration",
             "column": "az_route_time",
-            "bins": 10
+            "bins": 10,
+            "sync": true
           }
           , "histogram_widget_ride_time": {
+            "layerId": "230c4ce6-dee6-40f9-a79b-eeae1a3844d3",
             "type": "histogram",
             "title": "Estimated existing subway duration",
             "column": "minutes_on_subway",
-            "bins": 10
+            "bins": 10,
+            "sync": true
           }
-          , "histogram_widget_poverty": {
-            "type": "histogram",
-            "title": "Proportion in poverty",
-            "column": "ratio_poverty",
-            "bins": 10
-          }
+          // , "histogram_widget_poverty": {
+          //   "type": "histogram",
+          //   "title": "Proportion in poverty",
+          //   "column": "ratio_poverty",
+          //   "bins": 10
+          // }
         },
-        "vizJSON": {"id":"56d95766-be1c-11e5-ad7c-04013fc66a01","version":"0.1.0","title":"commuters_to_manhattan","likes":0,"description":null,"scrollwheel":false,"legends":true,"url":null,"map_provider":"leaflet","bounds":[[40.61864344909241,-74.05712127685547],[40.73893324113603,-73.7347412109375]],"center":"[40.678815477435386, -73.89593124389648]","zoom":12,"updated_at":"2016-01-18T20:04:12+00:00","layers":[{"options":{"visible":true,"type":"Tiled","name":"Dark matter (lite)","className":"dark_matter_lite_rainbow","base_type":"default","urlTemplate":"https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_nolabels/{z}/{x}/{y}.png","minZoom":"0","maxZoom":"18","attribution":"&copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors &copy; <a href=\"http://cartodb.com/attributions\">CartoDB</a>","subdomains":"abcd","style":null,"read_only":true,"category":"CartoDB","order":0,"id":"e0fd678d-231b-486b-b833-50453aed3765"},"infowindow":null,"tooltip":null,"id":"e0fd678d-231b-486b-b833-50453aed3765","order":0,"type":"tiled"},{"type":"layergroup","options":{"user_name":"solutions-ded02","maps_api_template":"https://{user}.cartodb-staging.com:443","sql_api_template":"https://{user}.cartodb-staging.com:443","tiler_protocol":"http","tiler_domain":"cartodb-staging.com","tiler_port":"80","sql_api_protocol":"http","sql_api_domain":"cartodb-staging.com","sql_api_endpoint":"/api/v2/sql","sql_api_port":80,"filter":"mapnik","layer_definition":{"stat_tag":"56d95766-be1c-11e5-ad7c-04013fc66a01","version":"1.0.1","layers":[{"id":"230c4ce6-dee6-40f9-a79b-eeae1a3844d3","type":"CartoDB","infowindow":{"fields":[],"template_name":"table/views/infowindow_light","template":"<div class=\"cartodb-popup v2\">\n  <a href=\"#close\" class=\"cartodb-popup-close-button close\">x</a>\n  <div class=\"cartodb-popup-content-wrapper\">\n    <div class=\"cartodb-popup-content\">\n      {{#content.fields}}\n        {{#title}}<h4>{{title}}</h4>{{/title}}\n        {{#value}}\n          <p {{#type}}class=\"{{ type }}\"{{/type}}>{{{ value }}}</p>\n        {{/value}}\n        {{^value}}\n          <p class=\"empty\">null</p>\n        {{/value}}\n      {{/content.fields}}\n    </div>\n  </div>\n  <div class=\"cartodb-popup-tip-container\"></div>\n</div>\n","alternative_names":{},"width":226,"maxHeight":180},"tooltip":{"fields":[],"template_name":"tooltip_light","template":"<div class=\"cartodb-tooltip-content-wrapper\">\n  <div class=\"cartodb-tooltip-content\">\n  {{#fields}}\n    {{#title}}\n    <h4>{{title}}</h4>\n    {{/title}}\n    <p>{{{ value }}}</p>\n  {{/fields}}\n  </div>\n</div>","alternative_names":{},"maxHeight":180},"legend":{"type":"category","show_title":false,"title":"","template":"","visible":true,"items":[{"name":"A","visible":true,"value":"#5CA2D1"},{"name":"M","visible":true,"value":"#FF6600"},{"name":"S","visible":true,"value":"#FFFFFF"}]},"order":1,"visible":true,"options":{"sql":"select * from total_time_to_manhattan_2","layer_name":"total_time_to_manhattan_2","cartocss":"/** category visualization */\n\n#total_time_to_manhattan_2 {\n   line-width: 2;\n   line-opacity: 0.7;\n}\n\n#total_time_to_manhattan_2[az_route=\"A\"] {\n   line-color: #5CA2D1;\n}\n#total_time_to_manhattan_2[az_route=\"M\"] {\n   line-color: #FF6600;\n}\n#total_time_to_manhattan_2[az_route=\"S\"] {\n   line-color: #FFFFFF;\n}","cartocss_version":"2.1.1","interactivity":"cartodb_id","table_name":"\"\"."}}]},"attribution":""}}],"overlays":[{"type":"share","order":2,"options":{"display":true,"x":20,"y":20},"template":""},{"type":"search","order":3,"options":{"display":true,"x":60,"y":20},"template":""},{"type":"zoom","order":6,"options":{"display":true,"x":20,"y":20},"template":"<a href=\"#zoom_in\" class=\"zoom_in\">+</a> <a href=\"#zoom_out\" class=\"zoom_out\">-</a>"},{"type":"loader","order":8,"options":{"display":true,"x":20,"y":150},"template":"<div class=\"loader\" original-title=\"\"></div>"},{"type":"logo","order":9,"options":{"display":true,"x":10,"y":40},"template":""}],"prev":null,"next":null,"transition_options":{"time":0}}
+        "vizJSON": {"id":"56d95766-be1c-11e5-ad7c-04013fc66a01","version":"0.1.0","title":"commuters_to_manhattan","likes":0,"description":null,"scrollwheel":false,"legends":true,"url":null,"map_provider":"leaflet","bounds":[[40.694891233400035,-73.98133277893065],[40.72208752428535,-73.90073776245117]],"center":"[40.70849076720841, -73.94103527069092]","zoom":14,"updated_at":"2016-01-18T21:14:59+00:00","layers":[{"options":{"visible":true,"type":"Tiled","name":"Dark matter (lite)","className":"httpscartodbbasemapssglobalsslfastlynetdark_nolabelszxypng","base_type":"default","urlTemplate":"https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_nolabels/{z}/{x}/{y}.png","minZoom":"0","maxZoom":"18","attribution":"&copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors &copy; <a href=\"http://cartodb.com/attributions\">CartoDB</a>","subdomains":"abcd","style":null,"read_only":true,"category":"CartoDB","order":0,"id":"e0fd678d-231b-486b-b833-50453aed3765"},"infowindow":null,"tooltip":null,"id":"e0fd678d-231b-486b-b833-50453aed3765","order":0,"type":"tiled"},{"type":"layergroup","options":{"user_name":"solutions-ded02","maps_api_template":"https://{user}.cartodb-staging.com:443","sql_api_template":"https://{user}.cartodb-staging.com:443","tiler_protocol":"http","tiler_domain":"cartodb-staging.com","tiler_port":"80","sql_api_protocol":"http","sql_api_domain":"cartodb-staging.com","sql_api_endpoint":"/api/v2/sql","sql_api_port":80,"filter":"mapnik","layer_definition":{"stat_tag":"56d95766-be1c-11e5-ad7c-04013fc66a01","version":"1.0.1","layers":[{"id":"230c4ce6-dee6-40f9-a79b-eeae1a3844d3","type":"CartoDB","infowindow":{"fields":[],"template_name":"table/views/infowindow_light","template":"<div class=\"cartodb-popup v2\">\n  <a href=\"#close\" class=\"cartodb-popup-close-button close\">x</a>\n  <div class=\"cartodb-popup-content-wrapper\">\n    <div class=\"cartodb-popup-content\">\n      {{#content.fields}}\n        {{#title}}<h4>{{title}}</h4>{{/title}}\n        {{#value}}\n          <p {{#type}}class=\"{{ type }}\"{{/type}}>{{{ value }}}</p>\n        {{/value}}\n        {{^value}}\n          <p class=\"empty\">null</p>\n        {{/value}}\n      {{/content.fields}}\n    </div>\n  </div>\n  <div class=\"cartodb-popup-tip-container\"></div>\n</div>\n","alternative_names":{},"width":226,"maxHeight":180},"tooltip":{"fields":[],"template_name":"tooltip_light","template":"<div class=\"cartodb-tooltip-content-wrapper\">\n  <div class=\"cartodb-tooltip-content\">\n  {{#fields}}\n    {{#title}}\n    <h4>{{title}}</h4>\n    {{/title}}\n    <p>{{{ value }}}</p>\n  {{/fields}}\n  </div>\n</div>","alternative_names":{},"maxHeight":180},"legend":{"type":"category","show_title":false,"title":"","template":"","visible":true,"items":[{"name":"A","visible":true,"value":"#5CA2D1"},{"name":"M","visible":true,"value":"#FF6600"},{"name":"S","visible":true,"value":"#FFFFFF"}]},"order":1,"visible":true,"options":{"sql":"select * from total_time_to_manhattan_2","layer_name":"total_time_to_manhattan_2","cartocss":"/** category visualization */\n\n#total_time_to_manhattan_2 {\n   line-width: 2;\n   line-opacity: 0.7;\n}\n\n#total_time_to_manhattan_2[az_route=\"A\"] {\n   line-color: #5CA2D1;\n}\n#total_time_to_manhattan_2[az_route=\"M\"] {\n   line-color: #FF6600;\n}\n#total_time_to_manhattan_2[az_route=\"S\"] {\n   line-color: #FFFFFF;\n}","cartocss_version":"2.1.1","interactivity":"cartodb_id","table_name":"\"\"."}},{"id":"6885dcd4-36bd-4382-a729-8c5e8f287760","type":"CartoDB","infowindow":{"fields":[],"template_name":"table/views/infowindow_light","template":"<div class=\"cartodb-popup v2\">\n  <a href=\"#close\" class=\"cartodb-popup-close-button close\">x</a>\n  <div class=\"cartodb-popup-content-wrapper\">\n    <div class=\"cartodb-popup-content\">\n      {{#content.fields}}\n        {{#title}}<h4>{{title}}</h4>{{/title}}\n        {{#value}}\n          <p {{#type}}class=\"{{ type }}\"{{/type}}>{{{ value }}}</p>\n        {{/value}}\n        {{^value}}\n          <p class=\"empty\">null</p>\n        {{/value}}\n      {{/content.fields}}\n    </div>\n  </div>\n  <div class=\"cartodb-popup-tip-container\"></div>\n</div>\n","alternative_names":{},"width":226,"maxHeight":180},"tooltip":{"fields":[],"template_name":"tooltip_light","template":"<div class=\"cartodb-tooltip-content-wrapper\">\n  <div class=\"cartodb-tooltip-content\">\n  {{#fields}}\n    {{#title}}\n    <h4>{{title}}</h4>\n    {{/title}}\n    <p>{{{ value }}}</p>\n  {{/fields}}\n  </div>\n</div>","alternative_names":{},"maxHeight":180},"legend":{"type":"none","show_title":false,"title":"","template":"","visible":true},"order":2,"visible":true,"options":{"sql":"select * from l_stops","layer_name":"l_stops","cartocss":"/** simple visualization */\n\n#l_stops{\n  marker-fill-opacity: 0.9;\n  marker-line-color: #FFF;\n  marker-line-width: 0;\n  marker-line-opacity: 1;\n  marker-placement: point;\n  marker-type: ellipse;\n  marker-width: 10;\n  marker-fill: #229A00;\n  marker-allow-overlap: true;\n}","cartocss_version":"2.1.1","interactivity":"cartodb_id","table_name":"\"\"."}}]},"attribution":""}}],"overlays":[{"type":"share","order":2,"options":{"display":true,"x":20,"y":20},"template":""},{"type":"search","order":3,"options":{"display":true,"x":60,"y":20},"template":""},{"type":"zoom","order":6,"options":{"display":true,"x":20,"y":20},"template":"<a href=\"#zoom_in\" class=\"zoom_in\">+</a> <a href=\"#zoom_out\" class=\"zoom_out\">-</a>"},{"type":"loader","order":8,"options":{"display":true,"x":20,"y":150},"template":"<div class=\"loader\" original-title=\"\"></div>"},{"type":"logo","order":9,"options":{"display":true,"x":10,"y":40},"template":""}],"prev":null,"next":null,"transition_options":{"time":0}}
       };
 
       cartodb.deepInsights.createDashboard('#dashboard', diJSON, {
         no_cdn: false
-      });
+      })
+      .vis
+      .done(function (v, l) {
+
+        // Ideally Here
+        // Two options
+        // First
+        // 1. make the layer of Green points interactive
+        // 2. when the user clicks any green point, we pretend that is where they would put the bus pickup
+        // 3. we update the SQL against the under layer to recalculate who would go where
+        // 4. we update the widgets
+        // second
+        // 1. make a geojson point at a starting lat/long
+        // 2. make it interactive so the user can drag/drop
+        // 3. when the user drops it, use mapzen to recalculate the travel time for the bus to manhattan
+        // 4. insert that time cost into our SQL equation
+        // 5. redraw the map and widgets
+      })
+
     }
   </script>
 </body>
