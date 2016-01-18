@@ -14,7 +14,10 @@ The L train is a major East-West subway artery of New York City, connecting Manh
 
 ### So who cares about an outage?
 
-_(We starting thinking that many of the inhabitants along the L line who work in Manhattan, likely chose the line for it's conveniently close proximity to work.)
+To start answering this question, we turned to data from the [American Community Survey](https://www.census.gov/programs-surveys/acs/), which describes the demographics of people, and [LODES](http://lehd.ces.census.gov/data/), which describes the dynamics between home and work. Both are products of the [United States Census](http://www.census.gov/).
+
+To look at the relationship of these datasets to the L train, we used location data on [L entrances](https://nycopendata.socrata.com/Transportation/Subway-Entrances/drex-xx56). Gathering all of this data, we could now get information about Brooklyn inhabitants who work in Manhattan and who are likely to use the L based on proximity.
+
 (need to fix the below. right now Y=%Riders in each block. Need Y=%Riders to Manhattan in each block)_
 
 ![ridership](imgs/ride-durations.png)
