@@ -1,4 +1,4 @@
-# The Subway Series: A disruption of epic proportions
+# Title pending
 
 [![img](imgs/brooklyn-network.png)](https://team.cartodb.com/u/mamataakella/viz/fdbcdcba-bd4f-11e5-b5f0-0e674067d321/embed_map)
 
@@ -41,7 +41,11 @@ There are a lot of different ways you can split the L ridership using parameters
 
 [![bivariate of poverty](imgs/draft-poverty-ridership.png)](https://team.cartodb.com/u/stuartlynn/viz/faa6fe76-bd67-11e5-98e2-0ecd1babdde5/public_map)
 
+### A disruption of epic proportions?
 
+_about the headline of epic proportions in news. how epic would it be?_
+
+[![alternate route](imgs/draft-bus-shuttle-option.png)](https://team.cartodb.com/u/andrew/viz/daa3e144-bd7f-11e5-81b1-0e3ff518bd15/public_map?redirected=true)
 
 
 (but people can't always move)
@@ -64,16 +68,4 @@ SELECT sum(subway_elevated_public_transit_commuters_16_and_over), az_route FROM 
 ```
 
 
-## A disruption of epic proportions
-
-
-
-More than  that, the L train services.... [STUB IN AGE, INCOME, FAMILY SIZE]
-
-(VISUAL)
-
-### Who is using the L?
-
 The MTA periodically releases data about [subway ridership](http://web.mta.info/nyct/facts/ridership/) but knowing who those people are takes a bit more work.
-
-(Waitig on Visuals we can use)
