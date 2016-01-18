@@ -59,6 +59,11 @@ _about the headline of epic proportions in news. how epic would it be?_
 
 ##
 
+Calculate the number of new buses needed. Assumption, 65 passengers per bus
+```
+update total_time_to_manhattan_2 set az_buses_required = CASE WHEN az_route = 'S' THEN lodes_jobs_bk_mh/65.0 ELSE 0 END
+```
+
 How to calculate new ride times based on optimization,
 
 ```
