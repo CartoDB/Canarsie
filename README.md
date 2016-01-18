@@ -2,7 +2,7 @@
 
 [![img](imgs/brooklyn-network.png)](https://team.cartodb.com/u/mamataakella/viz/fdbcdcba-bd4f-11e5-b5f0-0e674067d321/embed_map)
 
-Last week brought news that New York's Metropolitan Transit Authority (MTA) was considering how to repair damage to the Canarsie Tunnel, the vital connection used by the L train to connect Manhattan and Brooklyn under the East River. The damage was caused by flooding from 2012's Hurricane Sandy, and the closures for the repairs will in all likelihood have large consequences for L train riders in the near future. 
+Last week brought news that New York's Metropolitan Transit Authority (MTA) was considering how to repair damage to the Canarsie Tunnel, the vital connection used by the L train to connect Manhattan and Brooklyn under the East River. The damage was caused by flooding from 2012's Hurricane Sandy, and the closures for the repairs will in all likelihood have large consequences for L train riders in the near future.
 
 As the MTA weighs its options -- which include a full closing of the L train during repairs, or a longer period with weekend only closures -- CartoDB started digging into open data to shed some light on how disruptive the L train closure would be to the people living in Brooklyn. We specifically want to see how many people, their demographics, and the alternatives there are out there for what may come to the L.
 
@@ -18,7 +18,7 @@ To start answering this question, we turned to data from the [American Community
 
 To look at the relationship of these datasets to the L train, we used location data on [L entrances](https://nycopendata.socrata.com/Transportation/Subway-Entrances/drex-xx56). Gathering all of this data, we are now gather information about Brooklyn inhabitants who work in Manhattan and who are likely to use the L based on proximity.
 
-Using a series of table common joins on `geoid` and geospatial joins on a census block's closeness to an L entrance, we created a summary table of census block groups that are: 
+Using a series of table common joins on `geoid` and geospatial joins on a census block's closeness to an L entrance, we created a summary table of census block groups that are:
 
 1. Closer to L entrances than any other subway line
 2. Have counts of the number of workers who live in Brooklyn but work in Manhattan (via LODES)
@@ -43,7 +43,7 @@ _more about the above_. Use of Mapzen's Tangram yada yada
 
 There are a lot of assumptions in the above map, so we tried to drill down a bit further. By combining population data, subway ridership data, and the proportion of people in each location that travel to Manhattan for work, we are able to make estimates of the foot-traffic for every Brooklyn census block serviced by the L. With CartoDB, we are able to split up every unique route from home to the L entrences and determine segment-by-segment foot-traffic.
 
-[![foot traffic](imgs/draft-foot-traffic.png)](https://team.cartodb.com/u/stuartlynn/viz/25150cda-bd5d-11e5-a486-0e5db1731f59/public_map)
+[![foot traffic](imgs/draft-foot-traffic.png)](https://team.cartodb.com/u/mamataakella/viz/69d84614-be1d-11e5-8e44-0e674067d321/embed_map)
 
 _If you are Uber or Lift, this might be the start to understanding where you will put advertising in the next year_
 
