@@ -14,9 +14,16 @@ The L train is a major East-West subway artery of New York City, connecting Manh
 
 ### So who cares about an outage?
 
-To start answering this question, we turned to data from the [American Community Survey](https://www.census.gov/programs-surveys/acs/), which describes the demographics of people, and [LODES](http://lehd.ces.census.gov/data/), which describes the dynamics between home and work. Both are products of the [United States Census](http://www.census.gov/).
+To start answering this question, we turned to data from the [American Community Survey (ACS)](https://www.census.gov/programs-surveys/acs/), which describes the demographics of people, and [LODES](http://lehd.ces.census.gov/data/), which describes the dynamics between home and work. Both are products of the [United States Census](http://www.census.gov/).
 
-To look at the relationship of these datasets to the L train, we used location data on [L entrances](https://nycopendata.socrata.com/Transportation/Subway-Entrances/drex-xx56). Gathering all of this data, we could now get information about Brooklyn inhabitants who work in Manhattan and who are likely to use the L based on proximity.
+To look at the relationship of these datasets to the L train, we used location data on [L entrances](https://nycopendata.socrata.com/Transportation/Subway-Entrances/drex-xx56). Gathering all of this data, we are now gather information about Brooklyn inhabitants who work in Manhattan and who are likely to use the L based on proximity.
+
+Using a series of table common joins on `geoid` and geospatial joins on a census block's closeness to an L entrance, we created a summary table of census block groups that are: 
+
+1. Closer to L entrances than any other subway line
+2. Have counts of the number of workers who live in Brooklyn but work in Manhattan (via LODES)
+3. Demographic information (ACS)
+4. Routing information from the center of a Census Block to the nearest L entrance which gave us an estimate of walking distance and walking time (via Mapzen's [Valhalla](https://mapzen.com/projects/valhalla/)
 
 (need to fix the below. right now Y=%Riders in each block. Need Y=%Riders to Manhattan in each block)_
 
