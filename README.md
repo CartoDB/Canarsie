@@ -42,22 +42,22 @@ We have to start by pointing out caveats in the dataset that have come up again 
 
 While you can see Manhattan-bound subway riders along the entire length of the L, we were curious what relationships there were between travel-time and proportion of people who work in Manhattan. What we found was that three different breakdowns of travel time all showed a negative correlation (p<2e-04) with travel time. The three breakdowns are the _amount of time it takes to walk to the subway station_, _the amount of time riding the subway to Manhattan_, and the _total commute time_.
 
+The problem now is that people can't just move to new homes if the L is out of service for an extended period of time. So let's take a look at what a scenario of shuttle buses would look like.
+
 ![ridership](imgs/ride-durations.png)
 
+>>>> Andy's section here
 ### Affected populations
 
-Of the many demographic variables that one could explore:
-
-1. Proportion of subway riders;
-1. Proportion of block group that is in poverty;
-1. Proportion of block group that makes $12,500 or less and commutes to Manhattan;
-1. Number of people who ride the subway times the proportion of those in poverty
+There are many demographic variables that we could explore, but here we will narrow our focus to poverty status as defined by the ACS to slook at the proximity of affected populations to the L.
 
 We analyzed the data to identify areas in Brooklyn where significant groupings of like blockgroups appear so we could identify larger swaths that would be affected by the L closure.
 
 We can first look at the proportion of subway riders
 
-The problem now is that people can't just move to new homes if the L is out of service for an extended period of time. So let's take a look at what a scenario of shuttle buses would look like.
+<<<< Andy's Section
+
+
 
 ### Is there a realistic alternative?
 
