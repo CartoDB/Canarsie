@@ -4,7 +4,7 @@
 
 Last week brought news that New York's Metropolitan Transit Authority (MTA) was considering how to repair damage to the Canarsie Tunnel, the vital connection used by the L train to connect Manhattan and Brooklyn under the East River. The damage was caused by flooding from 2012's Hurricane Sandy, and the closures for the repairs will in all likelihood have large consequences for L train riders in the near future. 
 
-As the MTA weighs its options -- which include a full closing of the L train during repairs, or a longer period with weekend only closures -- CartoDB started digging into open data to shed some light on how disruptive the L train closure would be to the people living in Brooklyn. We specifically want to see how many people, their demographics, and the alternatives there are out there for what may come to the L.
+As the MTA weighs its options -- which include a full closing of the L train during repairs, or a longer period with weekend-only closures -- CartoDB started digging into open data to shed some light on how disruptive the L train closure would be to the people living in Brooklyn. We specifically want to see how many people, their demographics, and the alternatives there are out there for what may come to the L.
 
 ### The L Train
 
@@ -23,7 +23,7 @@ Using a series of table common joins on `geoid` and geospatial joins on a census
 1. Closer to L entrances than any other subway line
 2. Have counts of the number of workers who live in Brooklyn but work in Manhattan (via LODES)
 3. Demographic information (ACS)
-4. Routing information from the center of a Census Block to the nearest L entrance which gave us an estimate of walking distance and walking time (via Mapzen's [Valhalla](https://mapzen.com/projects/valhalla/)
+4. Routing information from the center of a Census Block to the nearest L entrance which gave us an estimate of walking distance and walking time (via Mapzen's [Valhalla](https://mapzen.com/projects/valhalla/))
 
 (need to fix the below. right now Y=%Riders in each block. Need Y=%Riders to Manhattan in each block)_
 
