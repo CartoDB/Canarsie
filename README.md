@@ -10,20 +10,25 @@ As the MTA weighs its options -- which include a full closing of the L train dur
 
 [![L overview](imgs/draft-l-overview.png)](https://team.cartodb.com/u/mamataakella/viz/df39c134-bd38-11e5-927e-0ecfd53eb7d3/public_map)
 
-The L train is a major East-West subway artery of New York City, connecting Manhattan with many parts of Brooklyn. If you know people who live in Williamsburg and commute to Manhattan in the morning, you've probably heard the stories of morning commutes where the only place to put your arms is on shoulders of the people packed like sardines all around you. In recent years, it has been one of the fastest growing subway lines in terms of ridership, with just the Bedford Avenue stop in Williamsburg seeing [27,224 average weekday customers](http://www.mta.info/news-subway-new-york-city-transit/2015/04/20/subway-ridership-surges-26-one-year) back in 2014. Besides the crowds, the L is a [pretty convenient train](https://en.wikipedia.org/wiki/Automation_of_the_New_York_City_Subway#Canarsie_Line_CBTC) for New York because of its early adoption of advanced signaling which allows for a more efficient volume of trains to travel on it's tracks.
+The L train is a major East-West subway artery of New York City, connecting Manhattan with many parts of Brooklyn. If you know people who live in Williamsburg and commute to Manhattan in the morning, you've probably heard the stories of morning commutes where the only place to put your arms is on heads of the other people packed like sardines all around you. In recent years, it has been one of the fastest growing subway lines in terms of ridership, with just the Bedford Avenue stop in Williamsburg seeing [27,224 average weekday customers](http://www.mta.info/news-subway-new-york-city-transit/2015/04/20/subway-ridership-surges-26-one-year) back in 2014. Besides the crowds, the L is a [pretty convenient train](https://en.wikipedia.org/wiki/Automation_of_the_New_York_City_Subway#Canarsie_Line_CBTC) for New York because of its early adoption of advanced signaling which allows for a more efficient volume of trains to travel on it's tracks.
 
-### So who cares about an outage?
+### What data is available to understand more about the L?
 
 To start answering this question, we turned to data from the [American Community Survey (ACS)](https://www.census.gov/programs-surveys/acs/), which describes the demographics of people, and [LODES](http://lehd.ces.census.gov/data/), which describes the dynamics between home and work. Both are products of the [United States Census](http://www.census.gov/).
 
-To look at the relationship of these datasets to the L train, we used location data on [L entrances](https://nycopendata.socrata.com/Transportation/Subway-Entrances/drex-xx56). Gathering all of this data, we are now gather information about Brooklyn inhabitants who work in Manhattan and who are likely to use the L based on proximity.
+To look at the relationship of these datasets to the L train, we used location data on [L entrances](https://nycopendata.socrata.com/Transportation/Subway-Entrances/drex-xx56). Gathering all of this data, we are able to assemble information about Brooklyn inhabitants who work in Manhattan and who are likely to use the L based on proximity. We calculate proximity to the L entryways from every block in Manahattan using walking directions calculated by Mapzen's [Valhalla](https://mapzen.com/projects/valhalla/).
 
 Using a series of table common joins on `geoid` and geospatial joins on a census block's closeness to an L entrance, we created a summary table of census block groups that are:
 
 1. Closer to L entrances than any other subway line
 2. Have counts of the number of workers who live in Brooklyn but work in Manhattan (via LODES)
 3. Demographic information (ACS)
-4. Routing information from the center of a Census Block to the nearest L entrance which gave us an estimate of walking distance and walking time (via Mapzen's [Valhalla](https://mapzen.com/projects/valhalla/)
+4. Routing information from the center of a Census Block to the nearest L entrance which gave us an estimate of walking distance and walking time
+
+Let's take a look!
+
+### So who cares about an outage?
+
 
 (need to fix the below. right now Y=%Riders in each block. Need Y=%Riders to Manhattan in each block)_
 
