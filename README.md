@@ -7,7 +7,7 @@ Last week brought news that New York's Metropolitan Transit Authority (MTA) was 
 As the MTA weighs its options -- which include a full closing of the L train during repairs, or a longer period with weekend only closures -- CartoDB started digging into open data to shed some light on how disruptive the L train closure would be to the people living in Brooklyn. We specifically want to see,
 
 1. Who cares about the L?
-2. Do people have a realistic alternative?
+2. Is there a realistic alternative?
 
 ### Overview of the L Train
 
@@ -34,13 +34,32 @@ Let's take a look!
 
 [![foot traffic](imgs/draft-foot-traffic.png)](https://team.cartodb.com/u/mamataakella/viz/69d84614-be1d-11e5-8e44-0e674067d321/embed_map)
 
-_If you are Uber or Lift, this might be the start to understanding where you will put advertising in the next year_
+Using the US census data and our calculated walking routes, we can take a look at L-bound foot traffic along routes throughout Brooklyn. Not only do the walking routes above show foot traffic to the L, but specifically these are people that travel all the way to Manhattan for work. We are interested to see if we see a spike in other, non-subway based, transportation options advertising on more on those routes soon.
 
+Some things you might notice right away is the span of coverage in the northwest and southeast of Brooklyn. In both cases, the L train serves many city blocks that aren't well serviced by other trains.
+
+We have to start by pointing out caveats in the dataset that have come up again and again in our analyses. First, as we'll show later, the further east people are located on the L the more viable alternatives they have to reach Manhattan in the same or similar travel time by changing to another line before the tunnel (e.g. the A at Broadway Junction). Second, we limited our blocks to those that were within a 30 minute walk or less of the subway. The US Census only collects one mode of transportation to work, so while many people probably take a bus to the subway, the data doesn't capture those cases.
+
+While you can see Manhattan-bound subway riders along the entire length of the L, we were curious what relationships there were between travel-time and proportion of people that work in Manhattan. What we found was that three different breakdowns of travel time all showed a negative correlation (p<2e-04) with travel time. The three breakdowns are the _amount of time it takes to walk to the subway station_, _the amount of time riding the subway to Manhattan_, and the _total commute time_.
+
+![ridership](imgs/ride-durations.png)
+
+The problem now is that people can't just move to new homes if the L is out of service for an extended period of time. So let's take a look at what a scenario of shuttle buses would look like.
+
+### Is there a realistic alternative?
+
+_about the headline of epic proportions in news. how epic would it be?_
+
+[![alternate route](imgs/draft-bus-shuttle-option.png)](https://team.cartodb.com/u/mamataakella/viz/5259fece-be2c-11e5-9d6a-0e98b61680bf/embed_map)
+
+![img](/imgs/draft-passengers-m-v-bus.png)
+
+
+(but people can't always move)
 
 
 (need to fix the below. right now Y=%Riders in each block. Need Y=%Riders to Manhattan in each block)_
 
-![ridership](imgs/ride-durations.png)
 
 _What we see is a very strong relationship between total commute time to manhattan and the ratio of the over-16 population that takes the subway to get to work. This makes a lot of intuitive sense. The mechanisms behind it could come from a few different places,_
 
@@ -63,16 +82,7 @@ There are a lot of different ways you can split the L ridership using parameters
 
 [![bivariate of poverty](imgs/draft-poverty-ridership.png)](https://team.cartodb.com/u/stuartlynn/viz/faa6fe76-bd67-11e5-98e2-0ecd1babdde5/public_map)
 
-### A disruption of epic proportions?
 
-_about the headline of epic proportions in news. how epic would it be?_
-
-[![alternate route](imgs/draft-bus-shuttle-option.png)](https://team.cartodb.com/u/mamataakella/viz/5259fece-be2c-11e5-9d6a-0e98b61680bf/embed_map)
-
-![img](/imgs/draft-passengers-m-v-bus.png)
-
-
-(but people can't always move)
 
 
 
