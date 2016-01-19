@@ -57,7 +57,7 @@ There are a lot of different ways you can split the L ridership using parameters
 
 _about the headline of epic proportions in news. how epic would it be?_
 
-[![alternate route](imgs/draft-bus-shuttle-option.png)](https://team.cartodb.com/u/andrew/viz/daa3e144-bd7f-11e5-81b1-0e3ff518bd15/public_map?redirected=true)
+[![alternate route](imgs/draft-bus-shuttle-option.png)](https://team.cartodb.com/u/mamataakella/viz/5259fece-be2c-11e5-9d6a-0e98b61680bf/embed_map)
 
 ![img](/imgs/draft-passengers-m-v-bus.png)
 
