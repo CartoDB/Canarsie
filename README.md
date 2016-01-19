@@ -66,6 +66,8 @@ We were curious at various speeds of shuttle bus how many subway passengers woul
 
 CONCLUSION
 
+possible alternative indicated in the contract. [3+ years of weekend disruption](http://www.subchat.com/read.asp?Id=1331886)
+
 
 
 * if you are curious what it's like down there [MTA Video Release: Canarsie Tube Signal and Track Recovery Operations](https://www.youtube.com/watch?v=DpfikZ-5mOw&list=PLZHkn788ZQJO45542MXbvZ53j1mf_xARx&index=19)
