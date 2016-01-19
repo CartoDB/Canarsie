@@ -48,20 +48,31 @@ The problem now is that people can't just move to new homes if the L is out of s
 
 ### Is there a realistic alternative?
 
-_about the headline of epic proportions in news. how epic would it be?_
+When the [Gothamist](http://gothamist.com/2016/01/13/l_train_tunnel_closure_years.php) covered the potential shutdown, they called them a potential _disruption of epic proportions_. We were curious, just how disruptive would a full closure of the L train be. The MTA suggested that one of the fastest ways to fix the L would be to close the Canarsie Tunnel completely, potentially replaced by shuttle bus services. Would that be realistic?
+
+To answer that question, we used CartoDB to analyze the best option for riders given different bus coverage. Given the location of the Williamsburg Bridge, we made the assumption that buses would originate at or close to the Lorimer stop in Williamsburg and end in Chinatown or Union Square in Manhattan. Using the Valhalla geocoder again, we found that fastest people could get to Manhattan via this new bus line would be around 10 minutes. To get to any location on the L line in Manhattan would take closer to 20.
+
+If the shuttle bus takes 20 minutes, we are able to calculate the best choices for riders along the L needing to get to Manhattan -- Should they go all the way to Lorimer and take the shuttle bus or should they transfer earlier at Myrtle-Wyckoff to the M train or at Broadway Junction to the A. The answer is shown in the map below.
 
 [![alternate route](imgs/draft-bus-shuttle-option.png)](https://team.cartodb.com/u/mamataakella/viz/5259fece-be2c-11e5-9d6a-0e98b61680bf/embed_map)
+
+We find that at 20 minute bus shuttle service, all but 5 stops on the L would be better off transferring to another existing line. The challenge that we realized was that at 20 minutes, the shuttle is the best option for almost 75,000 riders per day. Given large buses with 65 passengers this would still take 1154 bus trips per day, or a bus every minute and a half or so. And that is pretending there are only completely full buses or rush hours. We are guessing they'd have to build a new bridge.
+
+We were curious at various speeds of shuttle bus how many subway passengers would still be better taken the bus than back tracking to the M. What we found was that the numbers slowly decline up to 28 minutes. If the shuttle buses took 28 minutes they would still be the better option for 53,000 passengers over back tracking to the M. That is still 816 buses per day. If the shuttle buses took 29 minutes, everyone along the L is better off just taking the L to the M or the A transfers to get to Manhattan.
 
 ![img](/imgs/draft-passengers-m-v-bus.png)
 
 
-(but people can't always move)
+
+CONCLUSION
 
 
-(need to fix the below. right now Y=%Riders in each block. Need Y=%Riders to Manhattan in each block)_
 
 
-_What we see is a very strong relationship between total commute time to manhattan and the ratio of the over-16 population that takes the subway to get to work. This makes a lot of intuitive sense. The mechanisms behind it could come from a few different places,_
+# scratch
+
+
+
 
 * People choose where they live to make their trips to work more bearable.
 * When looking for jobs, people may be more likely to seek employment in places with easier access.
