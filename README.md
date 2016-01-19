@@ -72,6 +72,7 @@ possible alternative indicated in the contract. [3+ years of weekend disruption]
 
 * if you are curious what it's like down there [MTA Video Release: Canarsie Tube Signal and Track Recovery Operations](https://www.youtube.com/watch?v=DpfikZ-5mOw&list=PLZHkn788ZQJO45542MXbvZ53j1mf_xARx&index=19)
 * What does it cost to build a tunne? [Not much in 1918](http://query.nytimes.com/gst/abstract.html?res=9C0DE6DC103FE233A25757C1A9679C946796D6CF)
+* [200000 daily riders](http://web.mta.info/sandy/river_crossings.htm)
 
 
 # scratch
