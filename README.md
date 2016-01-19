@@ -59,6 +59,8 @@ _about the headline of epic proportions in news. how epic would it be?_
 
 [![alternate route](imgs/draft-bus-shuttle-option.png)](https://team.cartodb.com/u/andrew/viz/daa3e144-bd7f-11e5-81b1-0e3ff518bd15/public_map?redirected=true)
 
+![img](/imgs/draft-passengers-m-v-bus)
+
 
 (but people can't always move)
 
