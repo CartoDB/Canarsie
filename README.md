@@ -4,9 +4,12 @@
 
 Last week brought news that New York's Metropolitan Transit Authority (MTA) was considering how to repair damage to the Canarsie Tunnel, the vital connection used by the L train to connect Manhattan and Brooklyn under the East River. The damage was caused by flooding from 2012's Hurricane Sandy, and the closures for the repairs will in all likelihood have large consequences for L train riders in the near future.
 
-As the MTA weighs its options -- which include a full closing of the L train during repairs, or a longer period with weekend only closures -- CartoDB started digging into open data to shed some light on how disruptive the L train closure would be to the people living in Brooklyn. We specifically want to see how many people, their demographics, and the alternatives there are out there for what may come to the L.
+As the MTA weighs its options -- which include a full closing of the L train during repairs, or a longer period with weekend only closures -- CartoDB started digging into open data to shed some light on how disruptive the L train closure would be to the people living in Brooklyn. We specifically want to see,
 
-### The L Train
+1. Who cares about the L?
+2. Do people have a realistic alternative?
+
+### Overview of the L Train
 
 [![L overview](imgs/draft-l-overview.png)](https://team.cartodb.com/u/mamataakella/viz/df39c134-bd38-11e5-927e-0ecfd53eb7d3/public_map)
 
@@ -27,7 +30,12 @@ Using a series of table common joins on `geoid` and geospatial joins on a census
 
 Let's take a look!
 
-### So who cares about an outage?
+### Who cares about the L?
+
+[![foot traffic](imgs/draft-foot-traffic.png)](https://team.cartodb.com/u/mamataakella/viz/69d84614-be1d-11e5-8e44-0e674067d321/embed_map)
+
+_If you are Uber or Lift, this might be the start to understanding where you will put advertising in the next year_
+
 
 
 (need to fix the below. right now Y=%Riders in each block. Need Y=%Riders to Manhattan in each block)_
@@ -48,9 +56,6 @@ _more about the above_. Use of Mapzen's Tangram yada yada
 
 There are a lot of assumptions in the above map, so we tried to drill down a bit further. By combining population data, subway ridership data, and the proportion of people in each location that travel to Manhattan for work, we are able to make estimates of the foot-traffic for every Brooklyn census block serviced by the L. With CartoDB, we are able to split up every unique route from home to the L entrences and determine segment-by-segment foot-traffic.
 
-[![foot traffic](imgs/draft-foot-traffic.png)](https://team.cartodb.com/u/mamataakella/viz/69d84614-be1d-11e5-8e44-0e674067d321/embed_map)
-
-_If you are Uber or Lift, this might be the start to understanding where you will put advertising in the next year_
 
 #### The demographics
 
